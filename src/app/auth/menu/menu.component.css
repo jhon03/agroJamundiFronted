@@ -1,0 +1,20 @@
+.spacer{
+    flex: 1 1 auto;
+}
+.spacerIcon{
+    flex: o.1 0.1 auto;
+}
+a {
+    text-decoration: none;
+}
+.menu{
+    background-color: azure;
+}
+.material-symbols-outlined {
+position: rigth;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
