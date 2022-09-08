@@ -5,8 +5,11 @@
 export const environment = {
   production: false,
 
-  baseUrl: 'localhost:5432/agrojamundi'
-
+  baseUrl: 'localhost:5432/agrojamundi',
+  mapboxKey: 'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
+  mapboxKey2:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
+  mapboxKey3:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
+  mapboxKey4:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw'
 };
 
 /*
