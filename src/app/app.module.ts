@@ -15,6 +15,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/auth.service';
 import { AgricultorModule } from './agricultor/agricultor.module';
+import { ProductosModule } from './productos/productos.module';
+import { VerProductosComponent } from './productos/ver-productos/ver-productos.component';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatDividerModule} from '@angular/material/divider';
+ 
 
 @NgModule({
   declarations: [
@@ -32,7 +37,11 @@ import { AgricultorModule } from './agricultor/agricultor.module';
      FormsModule,
      MatButtonModule,
      HttpClientModule,
-     AgricultorModule
+     AgricultorModule, 
+     ProductosModule,
+     MatSliderModule,
+     MatDividerModule
+     
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

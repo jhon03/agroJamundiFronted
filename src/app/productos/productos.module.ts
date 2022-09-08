@@ -5,17 +5,33 @@ import { ProductosRoutingModule } from './productos-routing.module';
 import { RegistrarProductComponent } from './registrar-product/registrar-product.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { VerProductosComponent } from './ver-productos/ver-productos.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
+import { Finca1Component } from './finca1/finca1.component';
+import {MatDialogModule} from '@angular/material/dialog'; 
+
+import {MatButtonModule} from '@angular/material/button'; 
 
 
 @NgModule({
   declarations: [
-    RegistrarProductComponent
+    RegistrarProductComponent,
+    VerProductosComponent,
+    Finca1Component
   ],
   imports: [
     CommonModule,
     ProductosRoutingModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    MatButtonModule,
+    MatDialogModule
+   
+  
+
   ]
 })
 export class ProductosModule { }
