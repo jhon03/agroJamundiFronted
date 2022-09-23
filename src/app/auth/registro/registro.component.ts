@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
+  hide = true;
+ 
   constructor(private auth: AuthService, private router: Router) { }
 
   //datos obtenidos desde el html

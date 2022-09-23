@@ -19,11 +19,15 @@ import { ProductosModule } from './productos/productos.module';
 import { VerProductosComponent } from './productos/ver-productos/ver-productos.component';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatDividerModule} from '@angular/material/divider';
- 
-
+import { FooterComponent } from './footer/footer.component';
+import { NavegacionComponent } from './navegacion/navegacion.component';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatIconModule} from '@angular/material/icon'; 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    NavegacionComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import {MatDividerModule} from '@angular/material/divider';
      AgricultorModule, 
      ProductosModule,
      MatSliderModule,
-     MatDividerModule
+     MatDividerModule,
+     MatToolbarModule,
+     MatIconModule
      
   ],
   providers: [AuthService],

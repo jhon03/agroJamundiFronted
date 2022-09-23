@@ -1,0 +1,16 @@
+.menu{
+    background-color: azure;
+}
+.material-symbols-outlined {
+position: rigth;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined{
+
+    margin-right: 50%;
+  
+}

@@ -12,7 +12,7 @@ import { Finca1Component } from './finca1/finca1.component';
 import {MatDialogModule} from '@angular/material/dialog'; 
 
 import {MatButtonModule} from '@angular/material/button'; 
-
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatDividerModule,
     MatProgressBarModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatStepperModule
    
   
 
