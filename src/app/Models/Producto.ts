@@ -10,6 +10,5 @@ export class ProductoDTO{
     estado!: String;
     categoria!: String;
 
-    cliente!: number;
     idAgricultor!: number;
 }

@@ -2,7 +2,10 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as mapboxgl from 'mapbox-gl';
-import {MatDialog} from '@angular/material/dialog';;
+import {MatDialog} from '@angular/material/dialog';
+import { ProductoService } from 'src/app/Services/producto.service';
+import { ProductoDTO } from 'src/app/Models/Producto';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-ver-productos',
@@ -11,8 +14,10 @@ import {MatDialog} from '@angular/material/dialog';;
 })
 export class VerProductosComponent implements OnInit {
 
+  public productos : ProductoDTO[] = [];
+
     
-  constructor(public dialog: MatDialog ) { }
+  constructor(public dialog: MatDialog, private productoService: ProductoService) { }
  
 
 

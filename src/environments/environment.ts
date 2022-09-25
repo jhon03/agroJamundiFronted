@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
 
-  baseUrl: 'localhost:5432/agrojamundi',
+  baseUrl: 'http://localhost:9090',
+
   mapboxKey: 'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
   mapboxKey2:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
   mapboxKey3:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',

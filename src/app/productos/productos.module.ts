@@ -10,10 +10,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 import { Finca1Component } from './finca1/finca1.component';
 import {MatDialogModule} from '@angular/material/dialog'; 
-
 import {MatButtonModule} from '@angular/material/button'; 
-import {MatStepperModule} from '@angular/material/stepper';
-
+import { MatOptionModule } from '@angular/material/core';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     RegistrarProductComponent,
@@ -29,10 +28,9 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatProgressBarModule,
     MatButtonModule,
     MatDialogModule,
-    MatStepperModule
-   
+    MatOptionModule,
+    FormsModule
   
-
   ]
 })
 export class ProductosModule { }

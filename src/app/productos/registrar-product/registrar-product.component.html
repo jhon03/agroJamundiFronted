@@ -1,100 +1,64 @@
 
-<div class="form border_left">
-<mat-card-title> Registre un Producto
-</mat-card-title>
 
+<mat-card class="producto">
 
-<mat-card-content>
-    <div class="container">
+  <form>
+    <div class="form-group row">
+
+      <label for="NOMBRE" class="col-form-control col-sm-4"> Código Producto </label>
+
+      <div class="col-sm-8">
+
+        <input type="text" name=""  required="" class="form-control" [(ngModel)]="producto.codigo">
+      </div>
         
-        <mat-form-field>
-            <label>id_Inventario</label>
-        <form class="form-floating">
-           
-            <input placeholder="id_inventario" type="id" class="form-control" value="">
-            
-                </form>
-                </mat-form-field>
-
-                <mat-form-field>
-    <label>digite una cantidad</label>
-      <form class="form-floating">
-  <input type="number" class="form-control"  placeholder="cantidad" value="">
-  <label for="floatingInputValue"></label>
-      </form>
-       </mat-form-field>
-        <br>
-
-        <mat-form-field>
-            <label>Valor Unitario</label>
-              <form class="form-floating">
-  <input type="number" class="form-control"  placeholder="valorUnitario" value="">
-  <label for="floatingInputValue"></label>
-      </form>
-    </mat-form-field>
-
- <mat-form-field>
-    <label>nombre_agricultor</label>
- <form class="form-floating">
-    <input type="text" class="form-control" placeholder="nombre_agricultor" value="">
-    <label for="floatingInputValue"></label>
-        </form>
-    </mat-form-field>
- <br>
-
- <mat-form-field>
-    <label>nombre_producto</label>
- <form class="form-floating">
-    <input type="text" class="form-control" placeholder="nombre_producto" value="">
-    <label for="floatingInputValue"></label>
-        </form>
-    </mat-form-field>
- 
- <mat-form-field>
- <select class="form-select" aria-label="Default select example">
-    <option selected>seleccione una categoria</option>
-    <option value="1">AGRICOLA</option>
-    <option value="2">PEQUARIA</option>
-    <option value="3">PESQUERA</option>
-  </select>
- </mat-form-field>
- <br>
-
-
- <mat-form-field>
-    <label>salida_producto</label>
- <form class="form-floating">
-    <input type="number" class="form-control"  placeholder="salida_producto" value="">
-    <label for="floatingInputValue"></label>
-        </form>
- </mat-form-field>
- 
- <mat-form-field>
-    <label>Stock producto</label>
- <form class="form-floating">
-    <input type="number" class="form-control"  placeholder="Stock-Minimo" value="">
-    <label for="floatingInputValue"></label>
-        </form>
- </mat-form-field>
- <br>
-
- <mat-form-field>
-    <label>Id-producto</label>
- <form class="form-floating">
-    <input type="Id" class="form-control"  placeholder="id_producto" value="">
-    <label for="floatingInputValue"></label>
-        </form>
-    </mat-form-field>
     </div>
+
+ <div class="form-group row">
+      
+      <label for="NOMBRE" class="col-form-label col-sm-4"> Nombre Producto </label>
+
+      <div class="col-sm-8">
+
+        <input type="text" name=""  required="" class="form-control" [(ngModel)]="producto.nombre">
+      </div>
     
-</mat-card-content>
+        
+    </div>
 
-<mat-card-actions>
+    <div class="user-box">
+      
+      <label for="NOMBRE" class="col-form-label col-sm-3"> Precio</label>
+      <input type="numero" [(ngModel)]="producto.precio" >
+        
+    </div>
 
+    <div class="user-box">
+      
+      <label for="NOMBRE" class="col-form-label col-sm-3"> Descripcion  </label>
+      <input type="text" name=""  required="" [(ngModel)]="producto.descripcion">
+        
+    </div>
+
+    <div class="dropdown">
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="producto.categoria">
+        <option selected>seleccione una categoria</option>
+        <option value="1">AGRICOLA</option>
+        <option value="2">PEQUARIA</option>
+        <option value="3">PESQUERA</option>
+      </select>
+    </div>
+
+    <div class="user-box">
+      
+      <label for="NOMBRE" class="col-form-control col-sm-3"> Stock disponible  </label>
+      <input type="number" placeholder="cantidad" value="">
+        
+    </div>   
+    <mat-card-actions>
     <button type="button" class="btn btn-primary">Crear product</button>
+    </mat-card-actions>
+</form>
+</mat-card>
 
-    
-</mat-card-actions>
-
-
-</div>
+----------------------------------------

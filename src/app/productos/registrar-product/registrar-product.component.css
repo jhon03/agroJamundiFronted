@@ -3,3 +3,15 @@
     text-align: center;
     
 }
+.mat-form-field {
+    margin-top: 16px;
+  }
+
+.producto{
+
+    background-color: aqua;
+    width: 300px;
+    height: 400px;
+    margin: 100px;
+}
+
