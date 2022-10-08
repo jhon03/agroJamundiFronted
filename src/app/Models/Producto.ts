@@ -9,6 +9,8 @@ export class ProductoDTO{
     descripcion!: String;
     estado!: String;
     categoria!: String;
+    cantidad!: String;
+    stockDisponible!: string;
 
     idAgricultor!: number;
 }

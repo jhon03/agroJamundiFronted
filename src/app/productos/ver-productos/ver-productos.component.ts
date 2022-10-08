@@ -6,6 +6,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { ProductoService } from 'src/app/Services/producto.service';
 import { ProductoDTO } from 'src/app/Models/Producto';
 import swal from 'sweetalert2';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-ver-productos',
@@ -16,6 +17,7 @@ export class VerProductosComponent implements OnInit {
 
   public productos : ProductoDTO[] = [];
 
+  
     
   constructor(public dialog: MatDialog, private productoService: ProductoService) { }
  
@@ -23,6 +25,11 @@ export class VerProductosComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.productoService.getProductos().subscribe(
+      productos => this.productos = productos
+    );
+   
+    
     mapboxgl.accessToken =  environment.mapboxKey;
     const map = new mapboxgl.Map({
     container: 'mapa-mapbox', // container ID
@@ -61,8 +68,11 @@ export class VerProductosComponent implements OnInit {
           zoom: 9 // starting zoom
           
           });  
-        
-    
   }
 
-}
+    getProductos(){
+  this.productoService.getProductos().subscribe(resp => (this.productos = resp));
+
+    }
+  }
+

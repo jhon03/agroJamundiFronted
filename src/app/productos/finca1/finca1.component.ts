@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { stringToKeyValue } from '@angular/flex-layout/extended/style/style-transforms';
-
-
+ import { ProductoService } from 'src/app/Services/producto.service';
+import { ProductoDTO } from 'src/app/Models/Producto';
+import swal from 'sweetalert2';
 @Component({
   selector: 'app-finca1',
   templateUrl: './finca1.component.html',
@@ -9,26 +10,16 @@ import { stringToKeyValue } from '@angular/flex-layout/extended/style/style-tran
 })
 export class Finca1Component implements OnInit {
 
+  
 
   longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
   from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
   originally bred for hunting.`;
 
-  constructor() {
-
-
-   }
+  constructor( private productoService: ProductoService) { }
 
   ngOnInit(): void {
 
-
-
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
 
 /*
 https://www.youtube.com/watch?v=p-5eNidpjBs

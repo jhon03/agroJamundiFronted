@@ -5,59 +5,85 @@
   <form>
     <div class="form-group row">
 
-      <label for="NOMBRE" class="col-form-control col-sm-4"> Código Producto </label>
+      <label for="codigo" class="col-form-control col-sm-4"> Código Producto </label>
 
       <div class="col-sm-8">
 
-        <input type="text" name=""  required="" class="form-control" [(ngModel)]="producto.codigo">
+        <input type="text"  class="form-control" [(ngModel)]="producto.codigo" name="codigo">
       </div>
         
     </div>
 
  <div class="form-group row">
       
-      <label for="NOMBRE" class="col-form-label col-sm-4"> Nombre Producto </label>
+      <label for="nombre" class="col-form-label col-sm-4"> Nombre Producto </label>
 
       <div class="col-sm-8">
 
-        <input type="text" name=""  required="" class="form-control" [(ngModel)]="producto.nombre">
+        <input type="text"  class="form-control" [(ngModel)]="producto.nombre" name="nombre">
       </div>
     
         
     </div>
 
-    <div class="user-box">
+    <div class="form-group row">
       
-      <label for="NOMBRE" class="col-form-label col-sm-3"> Precio</label>
-      <input type="numero" [(ngModel)]="producto.precio" >
-        
+      <label for="precio" class="col-form-control col-sm-4"> Precio</label>
+     
+     <div class="col-sm-8">
+      <input type="deimal"   class="form-control" [(ngModel)]="producto.precio" name="precio" >
+    </div>
     </div>
 
-    <div class="user-box">
+    <div class="form-group row">
       
-      <label for="NOMBRE" class="col-form-label col-sm-3"> Descripcion  </label>
-      <input type="text" name=""  required="" [(ngModel)]="producto.descripcion">
-        
+      <label for="descripcion" class="col-form-control col-sm-4"> Descripcion  </label>
+     
+     <div class="col-sm-8">
+      <input type="text" class="form-control" [(ngModel)]="producto.descripcion" name="descripcion">
     </div>
 
+    </div>
+
+
+    <div class="form-group row">
+
+    <label for="categoria" class="col-form-control col-sm-4"> Categoria</label>
+   
+    <div class="col-sm-8">
     <div class="dropdown">
-      <select class="form-select" aria-label="Default select example" [(ngModel)]="producto.categoria">
-        <option selected>seleccione una categoria</option>
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="producto.categoria" name="categoria">
+  
         <option value="1">AGRICOLA</option>
         <option value="2">PEQUARIA</option>
         <option value="3">PESQUERA</option>
       </select>
     </div>
+  </div>
+  </div>
 
-    <div class="user-box">
+    <div class="form-group row">
       
-      <label for="NOMBRE" class="col-form-control col-sm-3"> Stock disponible  </label>
-      <input type="number" placeholder="cantidad" value="">
-        
+      <label for="Stock disponible" class="col-form-control col-sm-4"> Stock disponible  </label>
+     <div class="col-sm-8">
+      <input type="number" class="form-control" [(ngModel)]="producto.stockDisponible" name="stockDisponible">
+    </div>
     </div>   
+
+
+  <div class="form-group row-sm-10">
+
+  <div class="col-sm-8">
     <mat-card-actions>
-    <button type="button" class="btn btn-primary">Crear product</button>
-    </mat-card-actions>
+   <button class="btn btn-primary" role="button" (click)='crear()' *ngIf="!producto.idProducto else elseBlock">Crear product
+</button>
+  </mat-card-actions>
+
+<ng-template #elseBlock>
+  
+</ng-template>
+</div>  
+</div>
 </form>
 </mat-card>
 

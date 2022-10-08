@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CrearAgricultorComponent } from './crear-agricultor/crear-agricultor.component';
-import { CrearProductComponent } from './crear-product/crear-product.component';
+
 
 const routes: Routes = [
 
   {
     path: '',
-    component: CrearProductComponent
+    component: CrearAgricultorComponent
   },
   {
-    path:'crear-product', 
-    component: CrearProductComponent
+    path:'crear-agricultor', 
+    component: CrearAgricultorComponent
   },
 
   

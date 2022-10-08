@@ -18,9 +18,19 @@ export class ProductoService {
 
   constructor(private http: HttpClient) { }
 
+ 
+
+  getProductos(): Observable <ProductoDTO[]>{
+    return this.http.get<ProductoDTO[]>(this.baseUrl+ '/api/producto/productos');
+  }
+
   crear(producto: ProductoDTO) : Observable<ProductoDTO>{
 
-    return this.http.post<ProductoDTO>(this.baseUrl+'/api/producto/save', ProductoDTO);
+    return this.http.post<ProductoDTO>(this.baseUrl+'/api/producto/save', producto, {headers: this.httpHeaers});
+  }
+
+  getProducto(idProducto: any): Observable<ProductoDTO>{
+    return this.http.get<ProductoDTO>(`${this.baseUrl+ '/api/producto/findById/'}/${idProducto}`)
   }
 
 }
