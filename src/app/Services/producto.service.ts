@@ -14,19 +14,19 @@ export class ProductoService {
 
   private baseUrl: string = environment.baseUrl;
 
-  private httpHeaers = new HttpHeaders({'Content Type': 'application/json'})
+  private httpHeaders = new HttpHeaders({'Content Type': 'application/json'})
 
   constructor(private http: HttpClient) { }
 
  
-
+//array
   getProductos(): Observable <ProductoDTO[]>{
     return this.http.get<ProductoDTO[]>(this.baseUrl+ '/api/producto/productos');
   }
 
   crear(producto: ProductoDTO) : Observable<ProductoDTO>{
 
-    return this.http.post<ProductoDTO>(this.baseUrl+'/api/producto/save', producto, {headers: this.httpHeaers});
+    return this.http.post<ProductoDTO>(this.baseUrl+'/api/producto/save', producto, {headers: this.httpHeaders});
   }
 
   getProducto(idProducto: any): Observable<ProductoDTO>{

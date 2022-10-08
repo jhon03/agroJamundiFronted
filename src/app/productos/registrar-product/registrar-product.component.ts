@@ -11,7 +11,7 @@ import swal from 'sweetalert2';
 })
 export class RegistrarProductComponent implements OnInit {
 
- public producto: ProductoDTO = new ProductoDTO(); 
+  public producto: ProductoDTO = new ProductoDTO(); 
 
   constructor(private productoService: ProductoService,
     private router: Router,
@@ -22,7 +22,7 @@ export class RegistrarProductComponent implements OnInit {
 
   ngOnInit(): void {
 
-     this.cargarProducto();
+    this.cargarProducto();
   }
 
   cargarProducto(): void{
@@ -30,20 +30,19 @@ export class RegistrarProductComponent implements OnInit {
       let idProducto = params['idProducto']
 
       if(idProducto){
-        this.productoService.getProducto(idProducto).subscribe( (producto) => this.producto = producto)
+        this.productoService.getProducto(idProducto).subscribe((producto)=> this.producto = producto)
       }
     })
   }
 
-  crear(): void{
-    this.productoService.crear(this.producto).subscribe(producto => { 
-
-      this.router.navigate(['/ver-productos'])
-      swal.fire('New Product', `ProductoDTO ${this.producto.nombre} creado con exito`,'success')
+ public registar(): void{
+    this.productoService.crear(this.producto).subscribe(
+      response => this.router.navigate(['/ver-productos'])
+    
+    )
      
       
     }
-    );
+    
   }
 
-}
