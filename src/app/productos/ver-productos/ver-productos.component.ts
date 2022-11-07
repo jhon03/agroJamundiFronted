@@ -5,29 +5,38 @@ import * as mapboxgl from 'mapbox-gl';
 import {MatDialog} from '@angular/material/dialog';
 import { ProductoService } from 'src/app/Services/producto.service';
 import { ProductoDTO } from 'src/app/Models/Producto';
+import { Pedido } from 'src/app/Models/Pedido';
 import swal from 'sweetalert2';
 import { Observable } from 'rxjs';
-
+import { title } from 'process';
+import { PedidoService } from 'src/app/Services/pedido.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-ver-productos',
   templateUrl: './ver-productos.component.html',
   styleUrls: ['./ver-productos.component.css']
 })
 export class VerProductosComponent implements OnInit {
+[x: string]: any;
 
   public productos : ProductoDTO[] = [];
-
-  
-    
-  constructor(public dialog: MatDialog, private productoService: ProductoService) { }
+  public pedido: Pedido = new Pedido();
+  public producto : String[] = ['A','A','A','A','B','B'];
+  constructor(public dialog: MatDialog, private productoService: ProductoService,
+   private pedidoService: PedidoService,
+   private router: Router,
+   private activateRoute: ActivatedRoute) { }
  
 
 
   ngOnInit(): void {
 
+    this.cargarPedido();
+  
     this.productoService.getProductos().subscribe(
       productos => this.productos = productos
     );
+  
    
     
     mapboxgl.accessToken =  environment.mapboxKey;
@@ -70,9 +79,49 @@ export class VerProductosComponent implements OnInit {
           });  
   }
 
+
+
+  delete(producto: ProductoDTO): void{
+
+
+    this.productoService.delete(producto.idProducto).subscribe(
+      response => {
+        this.productos = this.productos.filter(pro => pro !== producto)
+ 
+        swal.fire('¿Seguro que desea eliminar el producto?', `Producto ${producto.nombre} eliminado con éxito`,'success')
+     
+      
+          }
+        );
+      }
+    
+
     getProductos(){
   this.productoService.getProductos().subscribe(resp => (this.productos = resp));
 
     }
+
+    cargarPedido(): void{
+      this.activateRoute.params.subscribe(params =>{
+        let idPedido = params['idPedido']
+
+        if(idPedido){
+          this.pedidoService.getPedido(idPedido).subscribe((pedido)=> this.pedido = pedido)
+
+        }
+      })
+    }
+    public creandoPedido(): void{
+
+      console.log(this.pedido)
+  
+      this.pedido.idClie = 4;
+      this.pedido.producto = 117;
+      this.pedidoService.addPedido(this.pedido).subscribe(pedido =>{
+        this.router.navigate(['/carrito-compras'])
+    
+      })
+
   }
 
+}

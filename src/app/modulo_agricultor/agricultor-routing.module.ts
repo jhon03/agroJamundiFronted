@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrearAgricultorComponent } from './crear-agricultor/crear-agricultor.component';
+import { CrearAgricultorComponent } from './productos/crear-agricultor.component';
 
 
 const routes: Routes = [

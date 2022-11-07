@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, Observable, pipe, switchAll, throwError } from 'rxjs';
-import { AgricultorModule } from '../agricultor/agricultor.module';
+import { AgricultorModule } from '../modulo_agricultor/agricultor.module';
 
 @Injectable({
   providedIn: 'root'

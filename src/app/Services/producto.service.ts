@@ -13,8 +13,7 @@ export class ProductoService {
 
 
   private baseUrl: string = environment.baseUrl;
-
-  private httpHeaders = new HttpHeaders({'Content Type': 'application/json'})
+  private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
   constructor(private http: HttpClient) { }
 
@@ -24,13 +23,24 @@ export class ProductoService {
     return this.http.get<ProductoDTO[]>(this.baseUrl+ '/api/producto/productos');
   }
 
-  crear(producto: ProductoDTO) : Observable<ProductoDTO>{
+  crear(producto: ProductoDTO) : Observable<any>{
 
-    return this.http.post<ProductoDTO>(this.baseUrl+'/api/producto/save', producto, {headers: this.httpHeaders});
+    return this.http.post(this.baseUrl+'/api/producto/save', producto);
   }
 
   getProducto(idProducto: any): Observable<ProductoDTO>{
     return this.http.get<ProductoDTO>(`${this.baseUrl+ '/api/producto/findById/'}/${idProducto}`)
   }
 
+delete(idProducto: number): Observable<ProductoDTO>{
+  return this.http.delete<ProductoDTO>(`${this.baseUrl+ '/api/producto/eliminarProducto'}/${idProducto}`,  {headers: this.httpHeaders})
+}
+
+getAgregarCarrito(nombre:string): Observable<ProductoDTO[]>{
+  return this.http.get<ProductoDTO[]>(this.baseUrl+ '/api/producto/buscarNombre' );
+}
+
+getAgregarcarrito(ProductoDTO: ProductoDTO){
+  
+}
 }

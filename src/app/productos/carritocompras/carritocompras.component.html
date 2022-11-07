@@ -1,0 +1,51 @@
+<!--
+
+       <mat-card class="card-pedido">
+            <label>agregaste a tu carrito</label>
+            <br>
+        
+            <mat-card-title>nombre</mat-card-title>
+
+
+        <mat-grid-tile>
+
+            <label>lista de productos: </label>
+            <mat-card-title>producto 1(nombre, precio, imagen</mat-card-title>
+            <br>
+            <mat-card-title>producto 2(nombre, precio, imagen</mat-card-title>
+            <label>$valor total</label>
+        </mat-grid-tile>
+      
+<button>ver carrito</button>
+<button>comprar carrito</button>
+  
+
+</mat-card>
+-->
+
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                <tr >
+                    <th>nombre</th>
+                    <th>codigo</th>
+                    <th>precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Quitar de lista</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let producto of productos">
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.codigo}}</td>
+                    <td>{{producto.precio}</td>
+                    <td>{{producto.Cantidad}}</td>
+                    <td>{{producto.total}}</td>
+                    <td>        </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    

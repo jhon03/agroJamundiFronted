@@ -11,7 +11,7 @@ const routes: Routes = [
 
     {
       path:'agricultor',
-      loadChildren: () => import('./agricultor/agricultor.module').then(m =>m.AgricultorModule)
+      loadChildren: () => import('./modulo_agricultor/agricultor.module').then(m =>m.AgricultorModule)
       },
       {
         path:'productos',

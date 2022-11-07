@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button'; 
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/auth.service';
-import { AgricultorModule } from './agricultor/agricultor.module';
+import { AgricultorModule } from './modulo_agricultor/agricultor.module';
 import { ProductosModule } from './productos/productos.module';
 import { VerProductosComponent } from './productos/ver-productos/ver-productos.component';
 import { MatSliderModule } from '@angular/material/slider';
@@ -23,11 +23,15 @@ import { FooterComponent } from './footer/footer.component';
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatIconModule} from '@angular/material/icon'; 
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    NavegacionComponent
+    NavegacionComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,9 @@ import {MatIconModule} from '@angular/material/icon';
      MatSliderModule,
      MatDividerModule,
      MatToolbarModule,
-     MatIconModule
+     MatIconModule,
+     MatSidenavModule,
+     MatListModule
      
   ],
   providers: [AuthService],

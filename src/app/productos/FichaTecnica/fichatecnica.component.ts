@@ -5,10 +5,10 @@ import { ProductoDTO } from 'src/app/Models/Producto';
 import swal from 'sweetalert2';
 @Component({
   selector: 'app-finca1',
-  templateUrl: './finca1.component.html',
-  styleUrls: ['./finca1.component.css']
+  templateUrl: './fichatecnica.component.html',
+  styleUrls: ['./fichatecnica.component.css']
 })
-export class Finca1Component implements OnInit {
+export class FichaTecnicaComponent implements OnInit {
 
   
 

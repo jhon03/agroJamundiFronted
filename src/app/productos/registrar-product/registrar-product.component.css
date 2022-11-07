@@ -9,10 +9,9 @@
 
 .producto{
 
-    background-color: aqua;
-    width: 300px;
+    width: 600px;
     height: 400px;
-    margin: 100px;
+    margin: 10%;
 }
 
 .form-group{

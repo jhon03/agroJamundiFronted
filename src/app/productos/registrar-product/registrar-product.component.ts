@@ -36,13 +36,17 @@ export class RegistrarProductComponent implements OnInit {
   }
 
  public registar(): void{
-    this.productoService.crear(this.producto).subscribe(
-      response => this.router.navigate(['/ver-productos'])
-    
-    )
-     
-      
+
+  console.log(this.producto)
+
+     this.producto.agricultor = 1;
+    this.productoService.crear(this.producto).subscribe( producto => {
+      this.router.navigate(['/ver-productos'])
+
+      swal.fire('Nuevo producto', `Producto ${this.producto.nombre} creado con exito`,'success' )
     }
+    );
+  }
     
   }
 

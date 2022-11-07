@@ -8,16 +8,21 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { VerProductosComponent } from './ver-productos/ver-productos.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
-import { Finca1Component } from './finca1/finca1.component';
+import { FichaTecnicaComponent } from './FichaTecnica/fichatecnica.component';
 import {MatDialogModule} from '@angular/material/dialog'; 
 import {MatButtonModule} from '@angular/material/button'; 
 import { MatOptionModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CarritocomprasComponent } from './carritocompras/carritocompras.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     RegistrarProductComponent,
     VerProductosComponent,
-    Finca1Component
+    FichaTecnicaComponent,
+    CarritocomprasComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +34,9 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatDialogModule,
     MatOptionModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
+    MatGridListModule
   
   ]
 })

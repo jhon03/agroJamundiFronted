@@ -11,6 +11,9 @@ export class ProductoDTO{
     categoria!: String;
     cantidad!: String;
     stockDisponible!: string;
+    nombrecientifico!: string;
+    disponibilidad!: string;
 
-    idAgricultor!: number;
+
+    agricultor!: number;
 }

@@ -1,6 +1,4 @@
-.menu{
-    background-color: azure;
-}
+
 .material-symbols-outlined {
 position: rigth;
   font-variation-settings:
@@ -13,4 +11,27 @@ position: rigth;
 
     margin-right: 50%;
   
+}
+
+.sidenav{
+  width: 25%;
+  margin: 5px;
+}
+
+.example-label {
+  
+  margin-left: 8px;
+  min-width: 20px;
+}
+
+.material-symbols-outlined {
+
+  margin: 10%;
+  
+}
+.menu{
+  margin: 90px;
+}
+.spacer{
+  flex: 1 auto;
 }

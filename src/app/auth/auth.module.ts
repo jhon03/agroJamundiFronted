@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
-import { MenuComponent } from './menu/menu.component';
+
 import { LoginComponent } from './login/login.component';
 import { MaterialModule } from '../material/material.module';
 
@@ -13,11 +13,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import { MatOptionModule } from '@angular/material/core';
 import { RegistroComponent } from './registro/registro.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
   declarations: [
-    MenuComponent,
+ 
     LoginComponent,
     RegistroComponent
   ],
@@ -30,6 +31,7 @@ import { RegistroComponent } from './registro/registro.component';
     MatCardModule, 
     MatFormFieldModule,
     MatOptionModule,
+    MatSidenavModule
 
   
   ]
