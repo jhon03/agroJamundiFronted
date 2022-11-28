@@ -13,20 +13,24 @@ import { ProductoDTO } from '../Models/Producto';
 export class PedidoService {
 
   private baseUrl: string = environment.baseUrl;
-  private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
+  private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' })
 
   constructor(private http: HttpClient) { }
 
-  carritoCompras(): Observable<ProductoDTO[]>{
-    return this.http.get<ProductoDTO[]>(this.baseUrl+ '/carrito/carritoCompras');
+  carritoCompras(): Observable<Pedido[]> {
+    return this.http.get<Pedido[]>(this.baseUrl + '/carrito/carritoCompras');
   }
 
-  addPedido(pedido: Pedido) : Observable<any>{
-
-    return this.http.post(this.baseUrl+'/carrito/addProducto', pedido);
+  addPedido(pedido: Pedido): Observable<any> {
+     
+    return this.http.post(this.baseUrl + '/carrito/addProducto', pedido);
   }
 
-  getPedido(idPedido: any): Observable<Pedido>{
-    return this.http.get<Pedido>(`${this.baseUrl+ '/carrito/buscarPedido/'}/${idPedido}`)
-}
+  getPedido(idPedido: any): Observable<Pedido> {
+    return this.http.get<Pedido>(`${this.baseUrl + '/carrito/buscarPedido/'}/${idPedido}`)
+  }
+
+  delete(idPedido: number): Observable<Pedido>{
+    return this.http.delete<Pedido>(`${this.baseUrl + '/carrito/eliminarPedido'}/${idPedido}`, { headers: this.httpHeaders })
+  }
 }

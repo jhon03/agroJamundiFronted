@@ -11,13 +11,13 @@ export class CrearAgricultorComponent implements OnInit {
 
   ngOnInit(): void {
 
-/** 
-    this.getbuscarCodigo("MEDE");
-  }
-   
-  getbuscarCodigo(code : string){
-    this.destinationService.getDestination(code).subscribe(resp => (this.destinations = resp));
-  }*/
+    /** 
+        this.getbuscarCodigo("MEDE");
+      }
+       
+      getbuscarCodigo(code : string){
+        this.destinationService.getDestination(code).subscribe(resp => (this.destinations = resp));
+      }*/
   }
 
 }

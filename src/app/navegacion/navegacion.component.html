@@ -1,69 +1,66 @@
 <mat-sidenav-container fullscreen>
 
-<!--aqui va lo del menú-->
-    <mat-sidenav class="sidenav" #sidenav>
-
-        <mat-toolbar>
-
-     <span>Menú</span>
-     <span class="spacer"></span>
-     <button (click)="sidenav.toggle()">
-        <span class="material-symbols-outlined">
-            toggle_on
-            </span>
-
-     </button>
-        </mat-toolbar>
-
-<!--lista-->
-
-<mat-nav-list>
-
-  <mat-list-item> <span>Inicio</span></mat-list-item>
-
-    <a routerLink="login" mat-list-item (click)="sidenav.toggle()"> 
-      <mat-icon mat-list-icon>logout</mat-icon>
-      <span>Login</span>
-    </a>
- 
-
-    <a routerLink="registro" mat-list-item (click)="sidenav.toggle()"> 
-      <mat-icon mat-list-icon>app_registration</mat-icon>
-      <span>Haz parte de la comunidad de Agricultores </span>
-    </a>
-
-    <a routerLink="registro"  mat-list-item (click)="sidenav.toggle()"> 
-      <mat-icon mat-list-icon>app_registration</mat-icon>
-      <span>¿Quieres comprar? Registrate</span>
-    </a>
-    <a routerLink="ver-productos" mat-list-item (click)="sidenav.toggle()"> 
-      <mat-icon mat-list-icon>arrow_right</mat-icon>
-   <span>Productos</span>
-  </a>
-    <a routerLink="crear-agricultor"mat-list-item mat-list-item (click)="sidenav.toggle()"> 
-      <mat-icon mat-list-icon>arrow_right</mat-icon>
-      <span>Agricultores</span></a>
-   
-
-</mat-nav-list>
-
-    </mat-sidenav>
-
+  <!--aqui va lo del menú-->
+  <mat-sidenav class="sidenav" #sidenav>
 
     <mat-toolbar>
-  <button (click)="sidenav.toggle()">
 
-    <mat-icon class="example-label">home</mat-icon>
+      <span>Menú</span>
+      <span class="spacer"></span>
+      <button (click)="sidenav.toggle()">
+        <span class="material-symbols-outlined">
+          toggle_on
+        </span>
 
-  </button>
-  <span>AgroPlazaJamundi</span>
-
+      </button>
     </mat-toolbar>
 
-    <router-outlet>  </router-outlet>
+    <!--lista-->
+
+    <mat-nav-list>
+
+      <mat-list-item> <span>Inicio</span></mat-list-item>
+
+      <a routerLink="login" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>logout</mat-icon>
+        <span>Login</span>
+      </a>
+
+
+      <a routerLink="registro" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>app_registration</mat-icon>
+        <span>Haz parte de la comunidad de Agricultores </span>
+      </a>
+
+      <a routerLink="registro" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>app_registration</mat-icon>
+        <span>¿Quieres comprar? Registrate</span>
+      </a>
+      <a routerLink="ver-productos" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>arrow_right</mat-icon>
+        <span>Productos</span>
+      </a>
+      <a routerLink="crear-agricultor" mat-list-item mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>arrow_right</mat-icon>
+        <span>Agricultores</span>
+      </a>
+
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+
+  <mat-toolbar>
+    <button (click)="sidenav.toggle()">
+
+      <mat-icon class="example-label">home</mat-icon>
+
+    </button>
+    <span>AgroPlazaJamundi</span>
+
+  </mat-toolbar>
+
+  <router-outlet> </router-outlet>
 
 </mat-sidenav-container>
-
-
-
-

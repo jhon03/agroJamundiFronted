@@ -24,28 +24,47 @@
 -->
 
 
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                <tr >
-                    <th>nombre</th>
-                    <th>codigo</th>
-                    <th>precio</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
-                    <th>Quitar de lista</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let producto of productos">
-                    <td>{{producto.nombre}}</td>
-                    <td>{{producto.codigo}}</td>
-                    <td>{{producto.precio}</td>
-                    <td>{{producto.Cantidad}}</td>
-                    <td>{{producto.total}}</td>
-                    <td>        </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                 <th>idPedido</th>
+                <th>codigo</th>
+                <th>fechaPedido</th>
+                <th>estado</th>
+                <th>cliente</th>
+                <th>productos</th>
+                <th>eliminar</th>
+                
+                <!--<th>producto</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Quitar de lista</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pedido of pedidos">
+                
+                <td>{{pedido.idPedido}}</td>        
+                <td>{{pedido.codigo}}</td>    
+                <td>{{pedido.fechaPedido}}</td>        
+                <td>{{pedido.estado}}</td>
+                <td>{{pedido.idClie}}</td>
+
+                <td>{{pedido.productos}}</td>
+          
+             
+                <td>
+                    <button type="button" name="eliminar" (click)='eliminarPedido(pedido)' class="btn btn-danger btn-sm">eliminar</button>
+
+
+                </td>
+                
+                <!--td>{{producto.Cantidad}}</td>
+                <td>{{producto.total}}</td>
+                <td> </td>-->
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
