@@ -16,6 +16,10 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CarritocomprasComponent } from './carritocompras/carritocompras.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -36,8 +40,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatOptionModule,
     FormsModule,
     FlexLayoutModule,
-    MatGridListModule
-  
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class ProductosModule { }

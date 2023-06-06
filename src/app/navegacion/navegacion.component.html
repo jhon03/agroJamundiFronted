@@ -21,21 +21,7 @@
 
       <mat-list-item> <span>Inicio</span></mat-list-item>
 
-      <a routerLink="login" mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>logout</mat-icon>
-        <span>Login</span>
-      </a>
-
-
-      <a routerLink="registro" mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>app_registration</mat-icon>
-        <span>Haz parte de la comunidad de Agricultores </span>
-      </a>
-
-      <a routerLink="registro" mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>app_registration</mat-icon>
-        <span>¿Quieres comprar? Registrate</span>
-      </a>
+      
       <a routerLink="ver-productos" mat-list-item (click)="sidenav.toggle()">
         <mat-icon mat-list-icon>arrow_right</mat-icon>
         <span>Productos</span>
@@ -58,6 +44,23 @@
 
     </button>
     <span>AgroPlazaJamundi</span>
+
+
+    <div class="login">
+     
+  
+      <a routerLink="login"> 
+       <mat-icon mat-list-icon>logout</mat-icon>
+       
+     </a>
+   
+     <a routerLink="registro"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+       </svg>
+     </a>
+   
+      </div>
+     
 
   </mat-toolbar>
 

@@ -35,3 +35,11 @@ position: rigth;
 .spacer{
   flex: 1 auto;
 }
+
+.login{
+
+  margin-left: 70%;
+  padding: 10px;
+  border: 10px;
+  position: relative;
+}

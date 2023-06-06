@@ -4,6 +4,18 @@ import { ProductoService } from 'src/app/Services/producto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import swal from 'sweetalert2';
 
+
+
+interface Categoria {
+  value: String;
+  viewValue: String;
+}
+
+
+interface ProdDisponible{
+  value2: String;
+  viewValue: String;
+}
 @Component({
   selector: 'app-registrar-product',
   templateUrl: './registrar-product.component.html',
@@ -11,6 +23,21 @@ import swal from 'sweetalert2';
 })
 export class RegistrarProductComponent implements OnInit {
 
+  categorias: Categoria[] = [
+
+    {value: 'agricola', viewValue: 'Agricola'},
+    {value: 'pecuaria', viewValue: 'Pecuaria'},
+    {value: 'pesquera', viewValue: 'Pesquera'}
+  
+   ]
+   disponibilidad: ProdDisponible[] = [
+
+    {value2: 'agricola', viewValue: 'Kg'},
+    {value2: 'pecuaria', viewValue: 'Lb'},
+    {value2: 'pesquera', viewValue: 'Tonelada'}
+  
+  
+   ]
   public producto: ProductoDTO = new ProductoDTO();
 
   constructor(private productoService: ProductoService,

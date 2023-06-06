@@ -1,98 +1,96 @@
 <mat-card class="producto">
 
   <form>
-    <div class="form-group row">
-
-      <label for="codigo" class="col-form-control col-sm-4"> Código Producto </label>
-
-      <div class="col-sm-8">
-
-        <input type="text" class="form-control" [(ngModel)]="producto.codigo" name="codigo" required="codigo">
-
-      </div>
-
-    </div>
-
-    <div class="form-group row">
-
-      <label for="nombre" class="col-form-label col-sm-4"> Nombre Producto </label>
-
-      <div class="col-sm-8">
-
-        <input type="text" class="form-control" [(ngModel)]="producto.nombre" name="nombre">
-      </div>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Código</mat-label>
+        <input matInput [(ngModel)]="producto.codigo" name="codigo" placeholder="Codigo">
+  
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>código para producto</mat-hint>
+      </mat-form-field>
+    </p>
 
 
-    </div>
 
-    <div class="form-group row">
-
-      <label for="precio" class="col-form-control col-sm-4"> Precio</label>
-
-      <div class="col-sm-8">
-        <input type="deimal" class="form-control" [(ngModel)]="producto.precio" name="precio">
-      </div>
-    </div>
-
-    <div class="form-group row">
-
-      <label for="descripcion" class="col-form-control col-sm-4"> Descripcion </label>
-
-      <div class="col-sm-8">
-        <input type="text" class="form-control" [(ngModel)]="producto.descripcion" name="descripcion">
-      </div>
-
-    </div>
-
-
-    <div class="form-group row">
-
-      <label for="nombre" class="col-form-label col-sm-4"> Nombre Cientifico </label>
-
-      <div class="col-sm-8">
-
-        <input type="text" class="form-control" [(ngModel)]="producto.nombrecientifico" name="nombrecientifico">
-      </div>
-
-
-    </div>
-
-
-    <div class="form-group row">
-
-      <label for="categoria" class="col-form-control col-sm-4"> Categoria</label>
-
-      <div class="col-sm-8">
-        <div class="dropdown">
-          <select class="form-select" aria-label="Default select example" [(ngModel)]="producto.categoria"
-            name="categoria">
-
-            <option value="1">AGRICOLA</option>
-            <option value="2">PEQUARIA</option>
-            <option value="3">PESQUERA</option>
-          </select>
-        </div>
-      </div>
-    </div>
 
     
-      <div class="form-group row">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>nombre de producto</mat-hint>
+    </mat-form-field>
+  </p>
 
-        <label for="categoria" class="col-form-control col-sm-4"> Disponible por:</label>
 
-        <div class="col-sm-8">
-          <div class="dropdown">
-            <select class="form-select" aria-label="Default select example" [(ngModel)]="producto.disponibilidad"
-              name="disponibilidad">
+  <p>
+    <mat-form-field floatLabel="always">
+      <mat-label>Precio</mat-label>
+      <input matInput  type="number" class="example-right-align" [(ngModel)]="producto.precio" name="precio" placeholder="0">
+      <span matTextPrefix>$&nbsp;</span>
+      <span matTextSuffix>.00</span>
+    </mat-form-field>
+  </p>
+  
+  <p>
+    <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea matInput [(ngModel)]="producto.descripcion" name="descripcion"></textarea>
+      </mat-form-field>
+  </p>
 
-              <option value="1">Libras(Lb)</option>
-              <option value="2">Kilogramo(Kg)</option>
-              <option value="3">Bulto</option>
-              <option value="3">Tonelada</option>
-            </select>
-          </div>
-        </div>
-      </div>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Estado</mat-label>
+      <input matInput  [(ngModel)]="producto.estado" name="estado" placeholder="Estado">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>estado del producto</mat-hint>
+    </mat-form-field>
+  </p>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Categoria</mat-label>
+    <input matInput [(ngModel)]="producto.categoria" name="categoria" placeholder="seleccionen Categoria">
+  
+    <mat-hint>categoria del producto</mat-hint>
+    
+       <mat-select>
+
+
+        <mat-option *ngFor="let categoria of categorias" [value]="categoria.value">
+          {{categoria.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre Cientifico</mat-label>
+        <input matInput [(ngModel)]="producto.nombrecientifico" name="nombrecientifico" placeholder="Nombre Cientifico">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>nombre Cientifico</mat-hint>
+      </mat-form-field>
+    </p>    
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Disponibilidad</mat-label>
+      <input matInput [(ngModel)]="producto.disponibilidad" name="disponibilidad" placeholder="Disponibilidad">
+    
+      <mat-hint>kg-Lb-Tonelada</mat-hint>
+      
+         <mat-select>
+  
+  
+          <mat-option *ngFor="let disponibilidad of disponibilidad" [value]="disponibilidad.value2">
+            {{disponibilidad.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
 
 
     <div class="form-group row-sm-10">
