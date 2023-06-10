@@ -38,8 +38,16 @@ position: rigth;
 
 .login{
 
-  margin-left: 70%;
+  margin-left: 16%;
   padding: 10px;
   border: 10px;
   position: relative;
+}
+
+.search{
+  margin-left: 30%;
+  padding: 8px;
+  border: 8px;
+  position: relative;
+
 }

@@ -19,8 +19,10 @@
 
     <mat-nav-list>
 
-      <mat-list-item> <span>Inicio</span></mat-list-item>
-
+      <a routerLink="inicio" mat-list-item mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon> arrow_right</mat-icon>
+       <span>Inicio</span>
+      </a>
       
       <a routerLink="ver-productos" mat-list-item (click)="sidenav.toggle()">
         <mat-icon mat-list-icon>arrow_right</mat-icon>
@@ -30,7 +32,7 @@
         <mat-icon mat-list-icon>arrow_right</mat-icon>
         <span>Agricultores</span>
       </a>
-
+     
 
     </mat-nav-list>
 
@@ -46,6 +48,11 @@
     <span>AgroPlazaJamundi</span>
 
 
+    <div class="search">
+      <input [(ngModel)]="agricultor.nombre"type="text" placeholder="Buscar agricultor">
+      <button (click)='cargarAgricultor()'>Buscar</button>
+    </div>
+ 
     <div class="login">
      
   

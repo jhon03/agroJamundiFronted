@@ -4,8 +4,14 @@ import { CarritocomprasComponent } from './carritocompras/carritocompras.compone
 import { FichaTecnicaComponent } from './FichaTecnica/fichatecnica.component';
 import { RegistrarProductComponent } from './registrar-product/registrar-product.component';
 import { VerProductosComponent } from './ver-productos/ver-productos.component';
+import { InicioComponent } from '../navegacion/inicio/inicio.component';
 
 const routes: Routes = [
+  {
+    path: 'inicio',
+    component: InicioComponent
+  },
+
 
   {
     path: 'productos',
