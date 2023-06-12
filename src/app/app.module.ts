@@ -26,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { InicioComponent } from './navegacion/inicio/inicio.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { InicioComponent } from './navegacion/inicio/inicio.component';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule
 
   ],
   providers: [AuthService],

@@ -9,7 +9,7 @@ import { VerProductosComponent } from './ver-productos/ver-productos.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 import { FichaTecnicaComponent } from './FichaTecnica/fichatecnica.component';
-import {MatDialogModule} from '@angular/material/dialog'; 
+import {MatDialogModule,  MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog'; 
 import {MatButtonModule} from '@angular/material/button'; 
 import { MatOptionModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
@@ -27,6 +27,7 @@ import {MatSelectModule} from '@angular/material/select';
     VerProductosComponent,
     FichaTecnicaComponent,
     CarritocomprasComponent
+
   ],
   imports: [
     CommonModule,
@@ -43,7 +44,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatGridListModule,
     MatIconModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule
   ]
 })
 export class ProductosModule { }

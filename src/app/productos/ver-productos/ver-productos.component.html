@@ -1,34 +1,44 @@
-<div fxLayout="row wrap" fxLayout.xs="columns" fxLayout.md="columns" fxLayoutAlign="center" fxLayoutGap="20px">
-  <div fxFlex="20" *ngFor="let producto of productos" fxFlex.xs="10" fxFlex.md="15" fxFlex.sm="20">
-    <mat-card class="example-card">
-      <mat-card-title-group>
-
-        <mat-card-title>{{producto.nombre}}</mat-card-title>
-        <mat-card-subtitle>{{producto.nombrecientifico}}</mat-card-subtitle>
-        <img mat-card-sm-image src="/assets/naranja_g.jpg">
-      </mat-card-title-group>
-      <mat-card-content>
-
-        <mat-card-text>${{producto.precio}}</mat-card-text>
-
-        <mat-card-text>{{producto.disponibilidad}}</mat-card-text>
 
 
-      </mat-card-content>
-
-      <mat-card-actions>
-        <button mat-stroked-button color="warn">editar</button>
-
-        <button type="button" name="eliminar" (click)='delete(producto)' class="btn btn-danger btn-sm"> eliminar
-        </button>
-
-
-        <button [routerLink]="['/carrito-compras']" (click)='creandoPedido()' class="material-symbols-outlined">
-          shopping_cart_checkout</button>
-
-      </mat-card-actions>
-    </mat-card>
-
-
-  </div>
+<div id="mapa-mapbox2">
+ 
 </div>
+
+
+ <div class="card">
+    <mat-card-title> welcome a tienda agro de: </mat-card-title>
+
+    <mat-card-subtitle>agricultor</mat-card-subtitle>       
+    
+    <mat-card-subtitle>vereda</mat-card-subtitle>  
+  
+  </div>
+
+
+  <mat-card class="example-card">
+
+    <mat-card-title-group>
+
+              
+      <img mat-card-sm-image src="/assets/naranja_g.jpg">
+
+      <mat-card-subtitle>nombre</mat-card-subtitle>
+      <mat-card-subtitle>nombrecientifico</mat-card-subtitle>
+      
+      <mat-card-subtitle>link consultar ficha técnica</mat-card-subtitle>
+      
+      <mat-form-field floatLabel="always">
+        <mat-label>cantidad</mat-label>
+        <input matInput  type="number" class="example-right-align"  name="precio" placeholder="¿qué cantidad deseas?">
+      </mat-form-field>
+
+     
+      <mat-card-actions>
+        <button mat-raised-button color="primary">
+          comprar
+        </button>
+        
+      </mat-card-actions>
+    </mat-card-title-group>
+
+      </mat-card>

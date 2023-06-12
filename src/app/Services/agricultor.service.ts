@@ -19,6 +19,9 @@ export class AgricultorService {
   getAgricultor(nombre: string): Observable<AgricultorDTO[]>{
     return this.http.get<AgricultorDTO[]>(this.baseUrl + `api/agricultor/buscarNombre?nombre=${nombre}`)
   }
-
+getAgricultores(): Observable<AgricultorDTO[]>{
+  return this.http.get<AgricultorDTO[]>(this.baseUrl + '/api/agricultor/agricultores');
+  
+}
 
 }

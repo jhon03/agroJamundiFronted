@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { AgricultorDTO } from 'src/app/Models/AgricultorDTO';
 import { AgricultorService } from 'src/app/Services/agricultor.service';
+import { VerProductosComponent } from 'src/app/productos/ver-productos/ver-productos.component';
 
 
 
@@ -17,9 +18,11 @@ import { AgricultorService } from 'src/app/Services/agricultor.service';
 
 })
 export class InicioComponent implements OnInit {
+
+  public Agricultor: AgricultorDTO[] = [];
  
 
-  public agricultor: AgricultorDTO = new AgricultorDTO();
+  public agricultores: AgricultorDTO[]= [];
 
 
 
@@ -35,6 +38,11 @@ export class InicioComponent implements OnInit {
 
     this.cargarAgricultor();
 
+    this.agricultorService.getAgricultores().subscribe(
+      agricultores => this.agricultores = agricultores
+    );
+
+
   }
 
 
@@ -49,6 +57,13 @@ export class InicioComponent implements OnInit {
 
         this.agricultorService.getAgricultor(nombre).subscribe((agricultor) => agricultor = agricultor)
 }
-})
+});
     }
-  }
+
+
+    getAgricultores(){
+      this.agricultorService.getAgricultores().subscribe(resp => (this.agricultores = resp));
+    }
+
+    
+}
