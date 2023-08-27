@@ -3,6 +3,7 @@ import { ProductoDTO } from 'src/app/Models/Producto';
 import { ProductoService } from 'src/app/Services/producto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import swal from 'sweetalert2';
+import { AgricultorDTO } from 'src/app/Models/AgricultorDTO';
 
 
 
@@ -66,7 +67,9 @@ export class RegistrarProductComponent implements OnInit {
 
     console.log(this.producto)
 
+  //  this.producto.agricultor = this.producto.agricultor;
     this.producto.agricultor = 1;
+
     this.productoService.crear(this.producto).subscribe(producto => {
       this.router.navigate(['/ver-productos'])
 

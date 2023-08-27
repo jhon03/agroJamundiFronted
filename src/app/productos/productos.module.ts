@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { ProductosRoutingModule } from './productos-routing.module';
 import { RegistrarProductComponent } from './registrar-product/registrar-product.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { VerProductosComponent } from './ver-productos/ver-productos.component';
+
 import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 import { FichaTecnicaComponent } from './FichaTecnica/fichatecnica.component';

@@ -49,11 +49,14 @@
 
 
     <div class="search">
+      
       <input [(ngModel)]="agricultor.nombre"type="text" placeholder="Buscar agricultor">
+  
+     
       <button (click)='cargarAgricultor()'>Buscar</button>
     </div>
  
-    <div class="login">
+   <!-- <div class="login">
      
   
       <a routerLink="login"> 
@@ -67,8 +70,14 @@
      </a>
    
       </div>
-     
+-->
 
+     <div class="agricultor">
+
+      <button mat-raised-button color="primary" routerLink="crear-agricultor">
+        Unirme como agricultor
+      </button>
+</div>
   </mat-toolbar>
 
   <router-outlet> </router-outlet>

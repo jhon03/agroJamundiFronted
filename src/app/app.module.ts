@@ -27,7 +27,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { InicioComponent } from './navegacion/inicio/inicio.component';
 import {MatGridListModule} from '@angular/material/grid-list';
-
 @NgModule({
   declarations: [
     AppComponent,

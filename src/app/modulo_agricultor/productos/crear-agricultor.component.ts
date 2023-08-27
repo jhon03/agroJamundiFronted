@@ -1,4 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { AgricultorDTO } from 'src/app/Models/AgricultorDTO';
+import { AgricultorService } from 'src/app/Services/agricultor.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import swal from 'sweetalert2';
+
+
+interface Tiide {
+  value: String;
+  viewValue: String;
+}
 
 @Component({
   selector: 'app-crear-agricultor',
@@ -7,9 +17,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearAgricultorComponent implements OnInit {
 
-  constructor() { }
+  tiposIdentificación: Tiide[] = [
+
+    {value: 'CC', viewValue: 'cédula de ciudadania'},
+    {value: 'PP', viewValue: 'PASAPORTE'},
+    {value: 'TI', viewValue: 'Tarjeta de Identidad'},
+    {value: 'CD', viewValue: 'cédula digital'}
+
+  ]
+
+  categoria: Tiide[] = [
+    {value: 'CC', viewValue: 'cédula de ciudadania'},
+    {value: 'PP', viewValue: 'PASAPORTE'},
+    {value: 'TI', viewValue: 'Tarjeta de Identidad'},
+    {value: 'CD', viewValue: 'cédula digital'}
+
+  ]
+
+  public agricultor: AgricultorDTO = new AgricultorDTO();
+  constructor(private agricultorService: AgricultorService,
+    private router: Router,
+    private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+
 
     /** 
         this.getbuscarCodigo("MEDE");
@@ -19,5 +51,18 @@ export class CrearAgricultorComponent implements OnInit {
         this.destinationService.getDestination(code).subscribe(resp => (this.destinations = resp));
       }*/
   }
+  
+  registrarAgricultor(): void {
+
+  console.log(this.agricultor)
+
+  this.agricultor.idTiid = 1;
+  this.agricultorService.crearAgricultor(this.agricultor).subscribe( agricultor => {
+  this.router.navigate(['/perfilAgricultor'])
+
+  swal.fire('Bienvenido a la comunidad de agricultores', `Agricultor ${this.agricultor.nombre} registrado con exito`, 'success')
+  })
+}
+
 
 }

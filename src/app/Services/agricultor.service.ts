@@ -24,4 +24,8 @@ getAgricultores(): Observable<AgricultorDTO[]>{
   
 }
 
+crearAgricultor(agricultor: AgricultorDTO): Observable<any> {
+  return this.http.post(this.baseUrl + '/api/agricultor/crear/agricultor', agricultor);
+  
+}
 }

@@ -1,38 +1,173 @@
-.button{
-    position:absolute;
-    text-align: center;
-    
-}
-.mat-form-field {
-    margin-top: 16px;
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .container{
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
+     margin-top: 16px;
+    }
   }
 
-.producto{
+/* Estilos para tabletas */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      width: 50%; /* Ajusta el valor según sea necesario */
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
+         margin-top: 16px;
+    }
+  }
 
-    width: 250px;
-    height: 900px;
-    margin: 7%;
+
+
+/* Estilos para pantallas más grandes (computadoras) */
+@media (min-width: 1024px) {
+    .container {
+      width: 100%; /* Ajusta el valor según sea necesario */
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
+         margin-top: 16px;
+    }
+
+    
 }
 
+@media (max-width: 767px) {
+
+    .producto{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .producto{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+
+    }
+}
+@media (min-width: 1024px) {
+
+    .producto{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+
+    }
+}
+@media (max-width: 767px) {
+
+    .form{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .form{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .form{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+        margin: 7%;
+       
+}
+}
+
+@media (max-width: 767px) {
 .form-group{
 
     margin: 10px;
+    
+}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .form-group{
+    margin: 10px;
+
+    }
 }
 
-.btn{
-    margin-right: 10px;
-    margin-left: 40px;
+
+
+@media (min-width: 1024px) {
+    .form-group{
+    margin: 10px;
+
+    }
 }
 
-:host {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+@media (max-width: 767px) {
+    .button{
+    
+        position:absolute;
+        text-align: center;
+        
+        
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .button{
+        position:absolute;
+        text-align: center;
+        
+
+    }
+}
+@media (min-width: 1024px) {
+    .button{
+        position:absolute;
+        text-align: center;
+        
+    }
+}
+
+
   
-.example-button-container {
-    display: flex;
-    justify-content: center;
-    width: 120px;
-  }
- 
+ .container mat-form-field{
+
+    width: 950px;
+ }
+ .form-group.row-sm-10 button {
+    width: 800px;
+    
+    margin-left: 80px;
+   
+    border: 10px;
+    
+ }

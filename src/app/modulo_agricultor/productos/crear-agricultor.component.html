@@ -1,90 +1,83 @@
-<div class="card border-primary mb-3">
-  <div class="card-header">productos</div>
-  <div class="card-body text-primary">
-    <h5 class="card-title">Módulo Agricultores</h5>
+
+  
+<mat-card class="agricultor">
+<form>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput name="nombre" placeholder="Nombre">
+      <mat-hint>Nombre completo</mat-hint>
+    </mat-form-field>
+  
+
+    
+    
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo Identificación</mat-label>
+      <input matInput name="nombre" placeholder="Nombre">
+      <mat-hint> CC-TI-PP </mat-hint>
+      </mat-form-field>
+  
+
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Número identificación</mat-label>
+      <input matInput name="nombre" placeholder="Nombre">
+      <mat-hint>digite número identificación</mat-hint>
+    </mat-form-field>
+  
+  
+  
+    <mat-form-field appearance="fill">
+      <mat-label>correo electrónico</mat-label>
+      <input matInput name="nombre" placeholder="digite correo electrónico">
+      <mat-hint>usuario@</mat-hint>
+    </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+      <mat-label>Telefono</mat-label>
+      <input matInput name="nombre" placeholder="telefono">
+      <mat-hint>Teléfono o celular</mat-hint>
+    </mat-form-field>
+  
 
 
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Nombre Agricultor</th>
-          <th># Productos Registrados</th>
-          <th>Estado</th>
-          <th>----</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>heberth</td>
-          <td>10</td>
-          <td>Activo</td>
-          <td><a routerLink="crear-producto">create new product</a></td>
+    <mat-form-field appearance="fill">
+      <mat-label>sexo</mat-label>
+      <input matInput name="nombre" placeholder="sexo">
+      <mat-hint>M/F o ND</mat-hint>
+    </mat-form-field>
+  
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Región</mat-label>
+      <input matInput name="región" placeholder="región">
+      <mat-hint>Región</mat-hint>
+    </mat-form-field>
+  
 
-        </tr>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>actividad agricultor</mat-label>
+      <input matInput name="nombre" placeholder="actividad agricultor">
+      <mat-hint>actividad agricultor</mat-hint>
+    </mat-form-field>
+  
+    <div class="form-group row-sm-10">
 
-      </tbody>
-    </table>
-  </div>
-</div>
+      <div class="col-sm-8">
+        <mat-card-actions>
+          <button class="btn btn-strocked" role="button" (click)='registarAgriucultor()'
+            *ngIf="!agricultor.idAgric else elseBlock">Guardar
+          </button>
+        </mat-card-actions>
 
-<div class="card border-primary mb-3">
-  <div class="card-header">ventas</div>
-  <div class="card-body text-primary">
-    <h5 class="card-title">Módulo Agricultores</h5>
+        <ng-template #elseBlock>
 
+        </ng-template>
+      </div>
+    </div>
 
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Nombre Agricultor</th>
-          <th># Productos Vendidos</th>
-          <th>Estado</th>
-          <th>Ventas</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>heberth</td>
-          <td>10</td>
-          <td>Activo</td>
-          <td><a href="#">ver ventas</a></td>
-          <td></td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
-<div class="card border-primary mb-3">
-  <div class="card-header">gastos</div>
-  <div class="card-body text-primary">
-    <h5 class="card-title">Módulo Agricultores</h5>
-
-
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Nombre Agricultor</th>
-
-          <th>Estado</th>
-          <th>Gastos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>heberth</td>
-
-          <td>Activo</td>
-          <td><a routerLink="/crear-producto">Registrar gastos</a></td>
-          <td></td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
-</div>
-<!--
-<div *ngFor="let destino of destinations">
-    <h1> {{destino.name}}</h1>-->
+</form>
+</mat-card>
