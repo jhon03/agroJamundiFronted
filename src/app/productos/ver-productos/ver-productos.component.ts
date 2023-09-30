@@ -6,13 +6,11 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dial
 import { ProductoService } from 'src/app/Services/producto.service';
 import { ProductoDTO } from 'src/app/Models/Producto';
 import { Pedido } from 'src/app/Models/Pedido';
-import swal from 'sweetalert2';
-import { Observable } from 'rxjs';
-import { title } from 'process';
+
+
 import { PedidoService } from 'src/app/Services/pedido.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import {NgIf} from '@angular/common';
-import { MatFormField } from '@angular/material/form-field';
+
 
 declare var ol: any;
 
