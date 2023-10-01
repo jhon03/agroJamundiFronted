@@ -5,7 +5,6 @@ import { ProductosRoutingModule } from './productos-routing.module';
 import { RegistrarProductComponent } from './registrar-product/registrar-product.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { VerProductosComponent } from './ver-productos/ver-productos.component';
 
 import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar'; 
@@ -20,14 +19,16 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { ProductoAgricolasComponent } from './producto-agricolas/producto-agricolas.component';
 
 
 @NgModule({
   declarations: [
     RegistrarProductComponent,
-    VerProductosComponent,
     FichaTecnicaComponent,
-    CarritocomprasComponent
+    CarritocomprasComponent,
+    ProductoAgricolasComponent,
+
 
   ],
   imports: [

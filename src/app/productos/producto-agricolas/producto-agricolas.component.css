@@ -1,0 +1,42 @@
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .tarjeta {
+    width: calc(33.33% - 20px); /* 33.33% para 3 columnas con espacios entre ellas */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .encabezado {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .encabezado h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .encabezado p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .imagen img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos para pantallas pequeñas (hasta 600px de ancho) */
+  @media screen and (max-width: 600px) {
+    .tarjeta {
+      width: 100%; /* Una columna en pantallas pequeñas */
+    }
+  }

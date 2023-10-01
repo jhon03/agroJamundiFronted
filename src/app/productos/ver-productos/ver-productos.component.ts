@@ -1,7 +1,7 @@
 
 import { Component, Inject, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import * as mapboxgl from 'mapbox-gl';
+
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ProductoService } from 'src/app/Services/producto.service';
 import { ProductoDTO } from 'src/app/Models/Producto';
@@ -43,12 +43,12 @@ export class VerProductosComponent {
     private activateRoute: ActivatedRoute) { }
 
 
-  mapbox: mapboxgl.Map;
+ // mapbox: mapboxgl.Map;
 
   
   ngOnInit(): void {
     
-    
+    /*
     mapboxgl.accessToken = environment.mapboxKey2;
     const mapbox = new mapboxgl.Map({
       container: 'mapa-mapbox2', // container ID
@@ -61,8 +61,8 @@ export class VerProductosComponent {
       bearing: -17.6,
       antialias: true
 
-      
-
+      */
+/*
     });
 
     const geojson ={
@@ -246,7 +246,7 @@ export class VerProductosComponent {
     
     map.addLayer(osmLayer);
   }
+*/
 
 
-
-}
+}}

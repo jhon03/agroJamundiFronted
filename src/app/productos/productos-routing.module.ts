@@ -5,6 +5,7 @@ import { FichaTecnicaComponent } from './FichaTecnica/fichatecnica.component';
 import { RegistrarProductComponent } from './registrar-product/registrar-product.component';
 import { VerProductosComponent } from './ver-productos/ver-productos.component';
 import { InicioComponent } from '../navegacion/inicio/inicio.component';
+import { ProductoAgricolasComponent } from './producto-agricolas/producto-agricolas.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'carrito-compras',
     component: CarritocomprasComponent
+  },
+  {
+    path: 'productos-agricolas',
+    component: ProductoAgricolasComponent
   }
 
 ];
