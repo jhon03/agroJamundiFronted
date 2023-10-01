@@ -34,7 +34,7 @@ export class NavegacionComponent implements OnInit {
 
       if(nombre){
 
-        this.agricultorService.getAgricultor(nombre).subscribe((agricultor) => agricultor = agricultor)
+      
         this.router.navigate(['/inicio'])
             }
     })

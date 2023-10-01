@@ -20,7 +20,7 @@
     <mat-nav-list>
 
       <a routerLink="inicio" mat-list-item mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon> arrow_right</mat-icon>
+   
        <span>Inicio</span>
       </a>
       
@@ -42,7 +42,7 @@
   <mat-toolbar>
     <button (click)="sidenav.toggle()">
 
-      <mat-icon class="example-label">home</mat-icon>
+     
 
     </button>
     <span>AgroPlazaJamundi</span>
@@ -50,7 +50,7 @@
 
     <div class="search">
       
-      <input [(ngModel)]="agricultor.nombre"type="text" placeholder="Buscar agricultor">
+      <input type="text" placeholder="Buscar agricultor">
   
      
       <button (click)='cargarAgricultor()'>Buscar</button>
@@ -80,6 +80,5 @@
 </div>
   </mat-toolbar>
 
-  <router-outlet> </router-outlet>
-
 </mat-sidenav-container>
+<router-outlet></router-outlet>

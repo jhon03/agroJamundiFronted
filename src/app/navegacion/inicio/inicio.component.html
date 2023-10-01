@@ -1,88 +1,13 @@
 
-  <div class="imagenes">
+ <!-- inicio.component.html -->
 
-    <div>
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/Agricultura.jpg" class="d-block w-100" alt="Agricultura animada 1">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/AGRICULTURA-INCLUSIVA.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/agricultura2.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-
-    </div>
-  
-  </div>
-
-
-  <div>
-
-    <div fxLayout="row wrap" fxLayout.xs="columns" fxLayout.md="columns" fxLayoutAlign="center" fxLayoutGap="20px">
-      <div fxFlex="20" *ngFor="let agricultor of agricultores" fxFlex.xs="10" fxFlex.md="15" fxFlex.sm="20">
-        
-    <mat-grid-list cols="2" rowHeight="2:1">
-     
-
-      <mat-grid-tile>
-        <mat-card class="example-card">
-          
-          <mat-card-header>
-            <mat-card-title-group>
-              <mat-card-title>{{agricultor.nombre}}</mat-card-title>
-              <mat-card-subtitle>{{agricultor.vereda}}</mat-card-subtitle>
-              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-            </mat-card-title-group>
-          </mat-card-header>
-          <mat-card-content>
-
-     {{agricultor.actividadAgricultor}}
-
-     <!--
-botón ingresar a tienda 
-     -->
-
-    
-      <mat-card-actions>
-        <button mat-raised-button color="primary">
-          Ingresar a tienda
-        </button>
-        
-      </mat-card-actions>
-
-      <ng-template #elseBlock>
-
-      </ng-template>
-
-
-          </mat-card-content>
-        </mat-card>
-
-        
-      </mat-grid-tile>
-      
-      
-    </mat-grid-list>
-    
+<div class="contenedor">
+  <h1>Elige una categoría del producto que desees</h1>
+  <div class="botones">
+    <a routerLink="/productos-agricolas">
+    <button class="boton">Agricola</button>
+     </a>
+    <button class="boton">Pesquera</button>
+    <button class="boton">Pecuaria</button>
   </div>
 </div>
-  </div>

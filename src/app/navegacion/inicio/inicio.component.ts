@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
-
-
-
 import { AgricultorDTO } from 'src/app/Models/AgricultorDTO';
-import { AgricultorService } from 'src/app/Services/agricultor.service';
-import { VerProductosComponent } from 'src/app/productos/ver-productos/ver-productos.component';
 
 
 
@@ -27,20 +20,13 @@ export class InicioComponent implements OnInit {
 
 
   
-  constructor(private agricultorService: AgricultorService,
-    private activateRoute: ActivatedRoute,
-    private router: Router) { 
+  constructor() { 
     
   }
 
   
   ngOnInit(): void {
 
-    this.cargarAgricultor();
-
-    this.agricultorService.getAgricultores().subscribe(
-      agricultores => this.agricultores = agricultores
-    );
 
 
   }
@@ -50,20 +36,9 @@ export class InicioComponent implements OnInit {
   cargarAgricultor(): void {
 
 
-    this.activateRoute.params.subscribe(params => {
-      let nombre = params['nombre']
-
-      if(nombre){
-
-        this.agricultorService.getAgricultor(nombre).subscribe((agricultor) => agricultor = agricultor)
+   
 }
-});
-    }
 
-
-    getAgricultores(){
-      this.agricultorService.getAgricultores().subscribe(resp => (this.agricultores = resp));
-    }
 
     
 }

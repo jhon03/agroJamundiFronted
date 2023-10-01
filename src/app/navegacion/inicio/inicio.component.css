@@ -1,27 +1,61 @@
-.imagenes{
 
-    height: 200px;
-    width: 600px;
-    margin: 70px;
-    padding: 20px;
-    border: 20px;
-    position: relative;
-  
+.contenedor {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+.boton {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas (hasta 600px de ancho) */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
   }
-
-  .carousel slide{
-
-    height: 200px;
-    width: 600px;
-    margin: 70px;
-    padding: 20px;
-    border: 20px;
-    position: relative;
   
+  .boton {
+    padding: 8px 16px;
+    margin: 0 5px;
+  }
+}
+
+/* Estilos para pantallas medianas (entre 601px y 1024px de ancho) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 28px;
   }
   
-
-  .example-card {
-    max-width: 400px;
-    margin-bottom: 8px;
+  .boton {
+    padding: 12px 24px;
+    margin: 0 15px;
   }
+}
+
+/* Estilos para pantallas grandes (más de 1024px de ancho) */
+@media screen and (min-width: 1025px) {
+  h1 {
+    font-size: 32px;
+  }
+  
+  .boton {
+    padding: 16px 32px;
+    margin: 0 20px;
+  }
+}
