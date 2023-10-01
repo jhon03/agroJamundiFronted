@@ -5,15 +5,15 @@
 export const environment = {
   production: false,
 
-  baseUrl: 'http://localhost:8080',
+  //baseUrl: 'http://localhost:8080',
 
   
 
-  mapboxKey: 'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
+ /* mapboxKey: 'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
   mapboxKey2:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
   mapboxKey3:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw',
   mapboxKey4:'pk.eyJ1Ijoiam9obi0wMyIsImEiOiJjbDduZ3d1ZXcyMWxyM3ZxcHVkcTgwenV6In0.rCvLiM91BVEkNjD_FkU1iw'
-
+*/
   
 };
 
