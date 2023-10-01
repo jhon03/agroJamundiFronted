@@ -54,14 +54,6 @@ export class CrearAgricultorComponent implements OnInit {
   
   registrarAgricultor(): void {
 
-  console.log(this.agricultor)
-
-  this.agricultor.idTiid = 1;
-  this.agricultorService.crearAgricultor(this.agricultor).subscribe( agricultor => {
-  this.router.navigate(['/perfilAgricultor'])
-
-  swal.fire('Bienvenido a la comunidad de agricultores', `Agricultor ${this.agricultor.nombre} registrado con exito`, 'success')
-  })
 }
 
 

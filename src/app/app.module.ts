@@ -10,7 +10,7 @@ import { AuthModule } from './auth/auth.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './Services/auth.service';
@@ -33,6 +33,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     FooterComponent,
     NavegacionComponent,
     InicioComponent,
+    VerProductosComponent
 
   ],
   imports: [
@@ -44,18 +45,18 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule,
     MatButtonModule,
     HttpClientModule,
     AgricultorModule,
-    ProductosModule,
     MatSliderModule,
     MatDividerModule,
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    ProductosModule
+ 
 
   ],
   providers: [AuthService],
